@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/builder_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/builder_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/builder_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_builder_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AlertDialog Builder"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:text="Configure a dialog, preview it, and inspect the generated Java builder code."
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_builder_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:text="Output: ready"
+                android:textColor="#1976D2"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Basics" />
+
+            <EditText
+                android:id="@+id/et_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dialog title"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/et_dialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top|start"
+                android:hint="Dialog message"
+                android:inputType="textMultiLine"
+                android:minLines="3" />
+
+            <CheckBox
+                android:id="@+id/cb_cancelable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cancelable" />
+
+            <CheckBox
+                android:id="@+id/cb_cancelable_outside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelable outside" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Actions" />
+
+            <Button
+                android:id="@+id/btn_add_action"
+                style="@style/DemoBtn"
+                android:text="Add Action" />
+
+            <LinearLayout
+                android:id="@+id/layout_actions_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Inputs" />
+
+            <Button
+                android:id="@+id/btn_add_input"
+                style="@style/DemoBtn"
+                android:text="Add Input" />
+
+            <LinearLayout
+                android:id="@+id/layout_inputs_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Style" />
+
+            <EditText
+                android:id="@+id/et_background_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Background color (#FFFFFF)"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_title_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Title color (#212121)"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_message_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Message color (#757575)"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_divider_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Divider color (#EEEEEE)"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_title_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Title text size (sp)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_message_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Message text size (sp)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_input_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Input text size (sp)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_corner_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Dialog corner radius (dp)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_button_corner_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Button corner radius (dp)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_button_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Button padding (dp)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_button_spacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Button spacing (dp)"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Button Colors" />
+
+            <EditText
+                android:id="@+id/et_primary_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Primary button background"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_primary_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Primary button text color"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_secondary_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Secondary button background"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_secondary_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Secondary button text color"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_destructive_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Destructive button background"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_destructive_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Destructive button text color"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_neutral_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Neutral button background"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_neutral_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Neutral button text color"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Layout" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content gravity" />
+
+            <Spinner
+                android:id="@+id/spinner_content_gravity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_layout_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Dialog padding (dp)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_max_width"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Max width (dp)"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Animation" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter animation" />
+
+            <Spinner
+                android:id="@+id/spinner_enter_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Exit animation" />
+
+            <Spinner
+                android:id="@+id/spinner_exit_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_animation_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Animation duration (ms)"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Custom Content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preset content type" />
+
+            <Spinner
+                android:id="@+id/spinner_custom_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_custom_content_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="No custom content selected."
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_custom_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Primary custom value"
+                android:inputType="textMultiLine"
+                android:minLines="2" />
+
+            <EditText
+                android:id="@+id/et_custom_secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Secondary custom value"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_custom_tertiary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Tertiary custom value"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Generated Java Code" />
+
+            <TextView
+                android:id="@+id/tv_generated_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#111111"
+                android:fontFamily="monospace"
+                android:padding="12dp"
+                android:textColor="#F5F5F5"
+                android:textIsSelectable="true"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/builder_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btn_preview_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Preview Dialog" />
+
+        <Button
+            android:id="@+id/btn_reset_builder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/btn_copy_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Copy Code" />
+    </LinearLayout>
+
+</LinearLayout>

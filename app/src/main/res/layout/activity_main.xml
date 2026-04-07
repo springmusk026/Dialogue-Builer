@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dialogue Library Demo"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Result: (none)"
+            android:textSize="13sp"
+            android:textColor="#1976D2" />
+
+        <Button
+            android:id="@+id/btn_builder_screen"
+            style="@style/DemoBtn"
+            android:text="Open AlertDialog Builder" />
+
+        <!-- Preset dialogs -->
+        <TextView style="@style/SectionTitle" android:text="Preset Dialogs" />
+        <Button android:id="@+id/btn_alert" style="@style/DemoBtn" android:text="Alert" />
+        <Button android:id="@+id/btn_info" style="@style/DemoBtn" android:text="Info" />
+        <Button android:id="@+id/btn_input" style="@style/DemoBtn" android:text="Input" />
+        <Button android:id="@+id/btn_confirm" style="@style/DemoBtn" android:text="Confirm" />
+        <Button android:id="@+id/btn_destructive" style="@style/DemoBtn" android:text="Destructive Confirm" />
+        <Button android:id="@+id/btn_loading" style="@style/DemoBtn" android:text="Loading (auto-dismiss)" />
+
+        <!-- Custom styling -->
+        <TextView style="@style/SectionTitle" android:text="Custom Styling" />
+        <Button android:id="@+id/btn_dark_theme" style="@style/DemoBtn" android:text="Dark Theme Dialog" />
+        <Button android:id="@+id/btn_colored_buttons" style="@style/DemoBtn" android:text="Custom Button Styles" />
+        <Button android:id="@+id/btn_custom_layout" style="@style/DemoBtn" android:text="Custom Padding &amp; Layout" />
+
+        <!-- Platform-styled dialogs -->
+        <TextView style="@style/SectionTitle" android:text="Platform-Styled Dialogs" />
+        <Button android:id="@+id/btn_apple" style="@style/DemoBtn" android:text="Apple / iOS Style" />
+        <Button android:id="@+id/btn_samsung" style="@style/DemoBtn" android:text="Samsung OneUI Style" />
+        <Button android:id="@+id/btn_material3" style="@style/DemoBtn" android:text="Material Design 3 Style" />
+        <Button android:id="@+id/btn_minimal" style="@style/DemoBtn" android:text="Minimal / Outline Style" />
+
+        <!-- Rich content -->
+        <TextView style="@style/SectionTitle" android:text="Rich Content" />
+        <Button android:id="@+id/btn_rich_text" style="@style/DemoBtn" android:text="Multi-line HTML-style Text" />
+        <Button android:id="@+id/btn_image" style="@style/DemoBtn" android:text="Image Dialog (URL)" />
+        <Button android:id="@+id/btn_webview" style="@style/DemoBtn" android:text="WebView Dialog" />
+        <Button android:id="@+id/btn_custom_view" style="@style/DemoBtn" android:text="Custom View (LinearLayout)" />
+        <Button android:id="@+id/btn_multi_input" style="@style/DemoBtn" android:text="Multi-Input Form" />
+        <Button android:id="@+id/btn_checkbox_list" style="@style/DemoBtn" android:text="Checkbox List" />
+        <Button android:id="@+id/btn_rating" style="@style/DemoBtn" android:text="Rating Dialog" />
+        <Button android:id="@+id/btn_list" style="@style/DemoBtn" android:text="Single-Choice List" />
+        <Button android:id="@+id/btn_progress" style="@style/DemoBtn" android:text="Progress Bar Dialog" />
+        <Button android:id="@+id/btn_color_picker" style="@style/DemoBtn" android:text="Color Picker" />
+
+        <!-- Callbacks -->
+        <TextView style="@style/SectionTitle" android:text="Callback Demos" />
+        <Button android:id="@+id/btn_show_cb" style="@style/DemoBtn" android:text="onShow + onDismiss" />
+        <Button android:id="@+id/btn_action_cb" style="@style/DemoBtn" android:text="onAction (track which btn)" />
+        <Button android:id="@+id/btn_input_cb" style="@style/DemoBtn" android:text="onInputResult (validated)" />
+
+        <!-- Animations -->
+        <TextView style="@style/SectionTitle" android:text="Animations" />
+        <Button android:id="@+id/btn_anim_fade" style="@style/DemoBtn" android:text="Fade Animation" />
+        <Button android:id="@+id/btn_anim_slide" style="@style/DemoBtn" android:text="Slide-Up Animation" />
+        <Button android:id="@+id/btn_anim_scale" style="@style/DemoBtn" android:text="Scale Animation" />
+        <Button android:id="@+id/btn_anim_none" style="@style/DemoBtn" android:text="No Animation" />
+
+    </LinearLayout>
+
+</ScrollView>
